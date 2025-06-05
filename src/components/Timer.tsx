@@ -37,9 +37,9 @@ const Timer = () => {
   const handleDurationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!isPlaying) {
       let value = parseInt(e.target.value, 10);
-      // if (isNaN(value)) return;
-      // if (value < 30) value = 30;
-      // if (value > 120) value = 120;
+      if (isNaN(value)) return;
+      if (value < 30) value = 30;
+      if (value > 120) value = 120;
       setDurationMinutes(value);
     }
   };
